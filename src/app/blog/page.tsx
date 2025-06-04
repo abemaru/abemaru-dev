@@ -5,17 +5,9 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="max-w-4xl mx-auto">
+    <div className="p-8 pb-20 gap-16 sm:p-20">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Blog</h1>
-        <div className="mb-8">
-          <Link 
-            href="/"
-            className="text-blue-600 hover:underline"
-          >
-            ← Back to Home
-          </Link>
-        </div>
         <div className="space-y-6">
           {posts.map((post) => (
             <article key={post.slug} className="border-b border-gray-200 pb-6">
@@ -43,7 +35,7 @@ export default function BlogPage() {
             </article>
           ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
