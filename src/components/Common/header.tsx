@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Switch } from '@headlessui/react'
-import { useTheme } from '../contexts/theme-context'
 
 const HomeIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,7 +34,6 @@ const MoonIcon = () => (
 );
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme()
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700">
@@ -46,7 +44,7 @@ export default function Header() {
               My Site
             </Link>
           </div>
-          
+
           <div className="flex items-center space-x-6">
             <Link
               href="/"
@@ -71,24 +69,6 @@ export default function Header() {
               <InfoIcon />
               <span>このページについて</span>
             </Link>
-
-            <div className="flex items-center space-x-2 ml-4">
-              <SunIcon />
-              <Switch
-                checked={theme === 'dark'}
-                onChange={toggleTheme}
-                className={`${
-                  theme === 'dark' ? 'bg-blue-600' : 'bg-gray-200'
-                } relative inline-flex h-6 w-11 items-center rounded-full transition-colors`}
-              >
-                <span
-                  className={`${
-                    theme === 'dark' ? 'translate-x-6' : 'translate-x-1'
-                  } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
-                />
-              </Switch>
-              <MoonIcon />
-            </div>
           </div>
         </div>
       </nav>
