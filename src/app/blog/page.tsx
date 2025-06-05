@@ -10,22 +10,22 @@ export default function BlogPage() {
         <h1 className="text-4xl font-bold mb-8">Blog</h1>
         <div className="space-y-6">
           {posts.map((post) => (
-            <article key={post.slug} className="border-b border-gray-200 pb-6">
+            <article key={post.slug} className="border-b border-gray-200 dark:border-gray-700 pb-6">
               <Link href={`/blog/${post.slug}`}>
-                <h2 className="text-2xl font-semibold mb-2 text-blue-600 hover:underline">
+                <h2 className="text-2xl font-semibold mb-2 text-blue-600 dark:text-blue-400 hover:underline">
                   {post.title}
                 </h2>
               </Link>
-              <p className="text-gray-600 text-sm mb-2">{post.date}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">{post.date}</p>
               {post.description && (
-                <p className="text-gray-700 mb-3">{post.description}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-3">{post.description}</p>
               )}
               {post.tags && (
                 <div className="flex gap-2">
                   {post.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm"
+                    <span
+                      key={tag}
+                      className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-sm"
                     >
                       {tag}
                     </span>
