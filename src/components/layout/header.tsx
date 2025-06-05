@@ -39,7 +39,7 @@ export default function Header() {
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <HomeIcon />
-              <span>ホーム</span>
+              <span className="hidden sm:inline">ホーム</span>
             </Link>
 
             <Link
@@ -47,7 +47,7 @@ export default function Header() {
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <BlogIcon />
-              <span>ブログ</span>
+              <span className="hidden sm:inline">ブログ</span>
             </Link>
 
             <Link
@@ -55,7 +55,7 @@ export default function Header() {
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <PersonIcon />
-              <span>わたしについて</span>
+              <span className="hidden sm:inline">わたしについて</span>
             </Link>
             <ThemeSwitch />
           </div>
