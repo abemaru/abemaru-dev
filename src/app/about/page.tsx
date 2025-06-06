@@ -17,13 +17,20 @@ export default function AboutPage() {
               src="https://pbs.twimg.com/profile_images/1544705950418075648/hD2Cod2s_400x400.jpg"
               alt="profileImg"
               fill
-              className="rounded-full object-cover border-4 border-blue-800 shadow-xl"
+              className="rounded-full object-cover border-4 border-slate-700 shadow-xl"
               sizes="(max-width: 640px) 80px, 180px"
               priority
             />
           </div>
         </div>
         <div>
+          <h2>技術アウトプット</h2>
+          <p>qiita</p>
+          <p>zenn</p>
+          <h2>contact</h2>
+          <p>twitter</p>
+          <h2>tips</h2>
+          <p>ko-fi</p>
         </div>
       </div>
     </main>
